@@ -10,25 +10,16 @@
         <h1 class="text-2xl font-bold my-5 capitalize">
             Simple request example
         </h1>
-        <!-- <button 
-        style="cursor: pointer;"
-        hx-get="/users"
-        hx-trigger="click"
-        hx-swap="outerHTML"
-
-        class="bg-blue-500 text-white py-2 px-3 my-5 rounded-lg capitalize">
-            fetch users
-        </button> -->
-
 
         <button
         style="cursor: pointer;"
         hx-get="/users"
         hx-trigger="click"
-        hx-swap="outerHTML"
+        hx-target="#users"
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded capitalize px-3 my-5">
   fetch users 2
 </button>
+<div id="users"></div>
 
     </div>
     <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>

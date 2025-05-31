@@ -13,12 +13,15 @@ const PORT = 3_000;
 app.listen(PORT, ()=>{
     console.log(`Server listening on port ${PORT.toLocaleString('en-GB')}`);
 });
-app.get('/users', (req, res) =>{
-    const users = [
-        {id: 1, name:'tom'},
-        {id: 2, name:'Jack'},
+app.get('/users',  async (req, res) =>{
+    // const users = [
+    //     {id: 1, name:'tom'},
+    //     {id: 2, name:'Jack'},
 
-    ];
+    // ];
+    const url = 'https://jsonplaceholder.typicode.com/users';
+    const response = await fetch(url);
+    const users = await response.json();
     res.send(/*html */`
         <h1 class="text-2xl font-bold my-4">
             Users
