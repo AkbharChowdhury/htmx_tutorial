@@ -4,26 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTMX Crash Course</title>
+    
 </head>
 <body>
+
     <div class="text-center">
-        <h1 class="text-2xl font-bold my-5 capitalize">
-            Simple request example
-        </h1>
-
-        <button
-        style="cursor: pointer;"
-        hx-get="/users"
-        hx-trigger="click"
-        hx-target="#users"
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded capitalize px-3 my-5">
-  fetch users
-</button>
-<div id="users"></div>
-
+        <h1 class="text-2xl font-bold my-5 capitalize">Simple request example</h1>
+        <button style="cursor: pointer;" hx-get="/users" hx-trigger="click" hx-target="#users" class="bg-blue-500 
+            hover:bg-blue-700 
+            text-white font-bold 
+            py-2 px-4 rounded
+            capitalize px-3 my-5">
+            fetch users
+        </button>
+        <div id="users"></div>
+    
     </div>
     <script src="https://unpkg.com/htmx.org@2.0.4" integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
 </body>
 </html>
